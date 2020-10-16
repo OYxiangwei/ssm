@@ -37,6 +37,7 @@
     </script>
 </head>
 <body>
+<h1>用户列表</h1>
 <div align="right">
     welcome:[<font color="#7fff00">${sessionScope.user.username}</font>]
     | <a href="logout">退出</a>

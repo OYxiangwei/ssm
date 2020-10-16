@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.get("hello.asp",function (data,status) {
+                if(status=="success"){
+                  alert("成功"+data+":"+status);
+                }else {
+                  alert("失败"+data+":"+status);
+                }
+            });
+        });
+    });
+  </script>
+</head>
+<body>
+
+<button>向页面发送 HTTP GET 请求，获得返回的结果</button>
+
+</body>
+</html>

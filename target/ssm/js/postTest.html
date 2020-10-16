@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery test</title>
+  <script src="jquery-3.5.1.min.js"></script>
+  <script>
+   $(document).ready(function () {
+        $("#btn").click(function () {
+            $.post("hello.asp",{
+              name:"ou",
+              city:"guiyang"
+            },function (data,status) {
+              alert("data:"+data+"\n status:"+status)
+              $("#d1").html(data+status)
+            },'text');
+
+        });
+    });
+  </script>
+</head>
+<body>
+<div id="d1"> welcome</div>
+    <button id="btn"> post </button>
+</body>
+</html>
